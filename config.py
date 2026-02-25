@@ -6,8 +6,8 @@ ENV_PARAMS = {
 }
 
 TRAINING_PARAMS = {
-    "episodes": 200_000,
-    "batch_size": 128,
+    "episodes": 5000,
+    "batch_size": 512,
     "gamma": 0.99,
     "lr": 3e-4,
     "buffer_size": 200_000,
@@ -20,7 +20,7 @@ TRAINING_PARAMS = {
 }
 
 MODEL_PARAMS = {
-    "hidden_sizes": [256, 256, 128, 64],
-    "dropout": 0.1,
-    "use_batch_norm": True,
+    "hidden_sizes": [256, 256, 128],
+    "dropout": 0.0,
+    "use_batch_norm": False
 }

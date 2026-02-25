@@ -13,3 +13,4 @@ def visualize_rewards(traditional_rewards, ai_rewards):
     plt.legend()
     plt.grid(True)
     plt.show()
+    

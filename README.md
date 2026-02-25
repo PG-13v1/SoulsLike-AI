@@ -89,6 +89,34 @@ Environment parameters
 
 Training episodes
 
+
+🌐 **Web-Based Dashboard (Local)**
+
+You can view the saved plots and graphs in a simple local website.
+
+1. Ensure you have Flask installed (`Flask` is already included in `requirements.txt`).
+2. Run the dashboard server:
+
+```bash
+python web_dashboard.py
+```
+
+3. Open your browser at `http://127.0.0.1:5000/`.
+4. Use the **Regenerate plots** link to re-create any static images from the logs (they are stored under `visualizations/`).
+
+    The homepage also includes links to dynamically generated charts:
+    * `/action_distribution.png` – boss action usage histogram
+    * `/policy_confidence.png` – smoothed max-Q values over training
+    * `/decision_explanation.png` – Q‑values for a sample decision
+    * `/state_tsne.png` – t‑SNE projection of recorded states
+
+    Those endpoints render a PNG on the fly so you can inspect them without
+    first saving a file.
+
+The site will list any `.png` files located in the `visualizations` folder. You can click an image to open it in a new tab.
+
+> ⚠️ The dashboard currently shows static files. If you need additional plots (e.g. action distributions or TSNE), run the corresponding functions manually or extend the Flask app with new endpoints.
+
 🎯 Goals & Roadmap
 
 Potential ways to evolve this project:
