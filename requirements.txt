@@ -1,7 +1,7 @@
 Flask==3.0.3
 gymnasium==0.29.1
 numpy==1.26.4
-torch==2.2.2
+torch>=2.2.0
 matplotlib==3.8.4
 tqdm==4.66.2
 pandas==2.2.2
