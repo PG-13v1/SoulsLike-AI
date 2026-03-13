@@ -1,7 +1,7 @@
 import numpy as np
 from environment import ComplexSoulslikeEnv
 
-def run_traditional_boss(episodes=100):
+def run_traditional_boss(episodes=50):
     env = ComplexSoulslikeEnv(adaptive=False)
     total_rewards = []
     for _ in range(episodes):
