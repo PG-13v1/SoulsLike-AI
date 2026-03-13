@@ -6,7 +6,7 @@ ENV_PARAMS = {
 }
 
 TRAINING_PARAMS = {
-    "episodes": 5000,
+    "episodes": 50,
     "batch_size": 512,
     "gamma": 0.99,
     "lr": 3e-4,
