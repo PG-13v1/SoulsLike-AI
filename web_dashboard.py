@@ -127,7 +127,6 @@ def images(filename):
     """Serve image assets directly from the visualizations folder."""
     return send_from_directory(app.static_folder, filename)
 
-
 if __name__ == "__main__":
-    # default port 5000, accessible on localhost
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
